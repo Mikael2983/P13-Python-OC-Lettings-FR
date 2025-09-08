@@ -19,6 +19,7 @@ import os
 
 from pathlib import Path
 
+import sentry_sdk
 
 # -------------------------------------------------------------------
 # Paths
@@ -162,3 +163,45 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # Directory where static files are collected in production
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+# -------------------------------------------------------------------
+# Sentry logging
+# -------------------------------------------------------------------
+
+sentry_sdk.init(
+    dsn="https://af4d8ce4e8fc02a654d2b3784ba504d8@o4509643092721664.ingest.de.sentry.io/4509842802409552",
+    # Add data like request headers and IP for users,
+    # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
+    send_default_pii=True,
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for tracing.
+    traces_sample_rate=1.0,
+)
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "sentry": {
+            "level": "INFO",
+            "class": "logging.NullHandler",
+        },
+    },
+    "root": {
+        "level": "ERROR",
+        "handlers": ["sentry"],
+    },
+    "loggers": {
+        "django.request": {
+            "level": "INFO",
+            "handlers": ["sentry"],
+            "propagate": False,
+        },
+        "django.security.DisallowedHost": {
+            "level": "ERROR",
+            "handlers": ["sentry"],
+            "propagate": False,
+        },
+    },
+}
