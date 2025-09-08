@@ -14,8 +14,24 @@ from django.urls import path, include
 from . import views
 
 
-# error 500 verification function
 def trigger_error(request):
+    """
+    Intentionally triggers a server error (HTTP 500) for testing purposes.
+
+    This view function divides 1 by 0 to raise a ZeroDivisionError,
+    which allows developers to verify error monitoring, logging, or
+    external error tracking tools (e.g., Sentry) are working correctly.
+
+    Args:
+        request (HttpRequest): The incoming HTTP request object.
+
+    Returns:
+        int: This function does not return a valid response since it
+        always raises an exception.
+
+    Raises:
+        ZeroDivisionError: Always raised due to division by zero.
+    """
     division_by_zero = 1 / 0
     return division_by_zero
 
