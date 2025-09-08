@@ -19,6 +19,8 @@ import os
 
 from pathlib import Path
 
+import sentry_sdk
+from django.core.management.utils import get_random_secret_key
 
 # -------------------------------------------------------------------
 # Paths
@@ -37,11 +39,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # -------------------------------------------------------------------
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'fp$9^593hsriajg$_%=5trot9g!1qa@ew(o-1#@=&4%=hp46(s'
+SECRET_KEY = os.getenv("OC_LETTINGS_SECRET_KEY", get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+DEBUG = os.getenv("DEBUG", "True") == "True"
 ALLOWED_HOSTS = ['localhost',
                  '127.0.0.1']
 
@@ -162,3 +163,45 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # Directory where static files are collected in production
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+# -------------------------------------------------------------------
+# Sentry logging
+# -------------------------------------------------------------------
+
+sentry_sdk.init(
+    dsn=os.getenv("OC_LETTINGS_SENTRY_DNS"),
+    # Add data like request headers and IP for users,
+    # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
+    send_default_pii=True,
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for tracing.
+    traces_sample_rate=1.0,
+)
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "sentry": {
+            "level": "INFO",
+            "class": "logging.NullHandler",
+        },
+    },
+    "root": {
+        "level": "ERROR",
+        "handlers": ["sentry"],
+    },
+    "loggers": {
+        "django.request": {
+            "level": "INFO",
+            "handlers": ["sentry"],
+            "propagate": False,
+        },
+        "django.security.DisallowedHost": {
+            "level": "ERROR",
+            "handlers": ["sentry"],
+            "propagate": False,
+        },
+    },
+}
