@@ -1,17 +1,30 @@
+"""
+URL configuration for the oc_lettings_site project.
+
+This module defines the URL routes for the entire project, including:
+- The home page
+- Django admin site
+- Lettings app
+- Profiles app
+- Custom error handlers for 404 and 500 HTTP errors
+"""
 from django.contrib import admin
 from django.urls import path, include
 
 from . import views
 
+
 # error 500 verification function
 def trigger_error(request):
     division_by_zero = 1 / 0
+    return division_by_zero
 
 # -------------------------------------------------------------------
 # Custom error handlers
 # -------------------------------------------------------------------
-
 # These handlers are automatically used by Django when a 404 or 500 error occurs
+
+
 handler404 = "oc_lettings_site.views.custom_error_404"
 handler500 = "oc_lettings_site.views.custom_error_500"
 
