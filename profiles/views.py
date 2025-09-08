@@ -1,18 +1,56 @@
-from django.shortcuts import render
-from .models import Profile
+"""
+Views for the profiles application.
+
+This module contains view functions for displaying the list of profiles
+and the details of a specific profile.
+"""
+from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render, get_object_or_404
+from profiles.models import Profile
 
 
-# Sed placerat quam in pulvinar commodo. Nullam laoreet consectetur ex, sed consequat libero pulvinar eget. Fusc
-# faucibus, urna quis auctor pharetra, massa dolor cursus neque, quis dictum lacus d
-def index(request):
+def index(request: HttpRequest) -> HttpResponse:
+    """
+        Display the list of all profiles.
+
+        Retrieves all `Profile` instances from the database and passes them
+        to the `profiles/index.html` template for rendering.
+
+        Args:
+            request (HttpRequest): The HTTP request object.
+
+        Returns:
+            HttpResponse: The rendered HTML page showing all profiles.
+
+        Template context:
+            profiles_list (QuerySet): A queryset containing all profiles.
+        """
     profiles_list = Profile.objects.all()
     context = {'profiles_list': profiles_list}
     return render(request, 'profiles/index.html', context)
 
-# Aliquam sed metus eget nisi tincidunt ornare accumsan eget lac
-# laoreet neque quis, pellentesque dui. Nullam facilisis pharetra vulputate. Sed tincidunt, dolor id facilisis fringilla, eros leo tristique lacus,
-# it. Nam aliquam dignissim congue. Pellentesque habitant morbi tristique senectus et netus et males
-def profile(request, username):
-    profile = Profile.objects.get(user__username=username)
+
+def profile(request: HttpRequest, username: str) -> HttpResponse:
+    """
+        Display the details of a single profile.
+
+        Retrieves the `Profile` instance matching the given ID and passes
+        its details to the `profiles/profile.html` template for rendering.
+
+        Args:
+            request (HttpRequest): The HTTP request object.
+            username (string): The username of the profile to display.
+
+        Returns:
+            HttpResponse: The rendered HTML page showing the profile details.
+
+        Template context:
+            title (str): The title of the profile.
+            address (Address): The address object related to the profile.
+
+        Raises:
+            Http404: If no profile exists with the given `profile_id`.
+        """
+    profile = get_object_or_404(Profile, user__username=username)
     context = {'profile': profile}
     return render(request, 'profiles/profile.html', context)
