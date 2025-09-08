@@ -24,7 +24,10 @@ class Letting(models.Model):
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User,
+                                on_delete=models.CASCADE,
+                                related_name="oc_lettings_profile"
+                                )
     favorite_city = models.CharField(max_length=64, blank=True)
 
     def __str__(self):
