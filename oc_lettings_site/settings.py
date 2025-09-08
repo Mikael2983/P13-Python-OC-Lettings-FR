@@ -49,17 +49,17 @@ ALLOWED_HOSTS = ['localhost',
 # Application definition
 # -------------------------------------------------------------------
 
-
 INSTALLED_APPS = [
-    'oc_lettings_site.apps.OCLettingsSiteConfig',
+    'oc_lettings_site.apps.OCLettingsSiteConfig',  # Main project app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'lettings',
-    'profiles'
+    'profiles',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'oc_lettings_site.urls'
@@ -152,7 +153,12 @@ USE_TZ = True
 
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+# URL to serve static files
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static",]
+
+# Directories with static files for development
+STATICFILES_DIRS = [BASE_DIR / "static"]
+
+# Directory where static files are collected in production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
