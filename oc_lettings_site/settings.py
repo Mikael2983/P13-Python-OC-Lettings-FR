@@ -36,9 +36,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # -------------------------------------------------------------------
 
 env.read_env()
-var = env.str("SENTRY_DSN_OC_LETTINGS")
 DEBUG = env.bool("DEBUG", False)
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
