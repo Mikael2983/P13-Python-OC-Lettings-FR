@@ -35,7 +35,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # environment variables
 # -------------------------------------------------------------------
 var = os.getenv("SENTRY_DSN_OC_LETTINGS")
-print(f"****************{var}*******************")
+DEBUG = os.getenv("DEBUG")
+print(f"****************var:{var}*******************")
+print(f"**************debug:{DEBUG}******************")
 env.read_env()
 
 # Quick-start development settings - unsuitable for production
@@ -53,7 +55,9 @@ env.read_env()
 SECRET_KEY = env.str("OC_LETTINGS_SECRET_KEY", default=get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DEBUG", default=False)
+
+
+
 
 ALLOWED_HOSTS = ['localhost',
                  '127.0.0.1']
