@@ -15,7 +15,7 @@ jobs:
         python-version: ["3.10", "3.11", "3.12"]
     env:
       OC_LETTINGS_SECRET_KEY: ${{ secrets.OC_LETTINGS_SECRET_KEY }}
-      OC_LETTINGS_SENTRY_DNS: ${{ secrets.OC_LETTINGS_SENTRY_DNS }}
+      OC_LETTINGS_SENTRY_DNS: ${{ secrets.SENTRY_DNS_OC_LETTINGS }}
       DEBUG: False
 
     steps:
