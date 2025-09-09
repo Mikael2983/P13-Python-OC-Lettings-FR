@@ -104,7 +104,7 @@ jobs:
         SENTRY_DSN_OC_LETTINGS: ${{ vars.TEST_VAR }}
       steps:
         - name: check variable
-          run: echo "SENTRY_DSN:$"
+          run: echo "SENTRY_DSN:${{ vars.TEST_VAR }}"
         - uses: actions/checkout@v4
 
         - name: Log in to DockerHub
