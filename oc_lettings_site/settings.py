@@ -60,7 +60,8 @@ SECRET_KEY = env.str("OC_LETTINGS_SECRET_KEY", default=get_random_secret_key())
 
 
 ALLOWED_HOSTS = ['localhost',
-                 '127.0.0.1']
+                 '127.0.0.1',
+                 'p13-python-oc-lettings-fr.onrender.com']
 
 # -------------------------------------------------------------------
 # Application definition
