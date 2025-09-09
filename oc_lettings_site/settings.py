@@ -15,12 +15,15 @@ This module contains all the configuration for the Django project, including:
 For more information, see:
 https://docs.djangoproject.com/en/3.0/topics/settings/
 """
+import environ
 import os
 
 from pathlib import Path
 
 import sentry_sdk
 from django.core.management.utils import get_random_secret_key
+from sentry_sdk.integrations.django import DjangoIntegration
+
 
 # -------------------------------------------------------------------
 # Paths
@@ -29,6 +32,13 @@ from django.core.management.utils import get_random_secret_key
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# -------------------------------------------------------------------
+# environment variables
+# -------------------------------------------------------------------
+
+env = environ.Env()
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'), overwrite=True)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -38,11 +48,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security
 # -------------------------------------------------------------------
 
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("OC_LETTINGS_SECRET_KEY", get_random_secret_key())
+# Raises Django's ImproperlyConfigured
+# exception if SECRET_KEY not in os.environ
+SECRET_KEY = env("OC_LETTINGS_SECRET_KEY", default=get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "True") == "True"
+DEBUG = env.bool("DEBUG", default=False)
+
 ALLOWED_HOSTS = ['localhost',
                  '127.0.0.1']
 
@@ -170,7 +184,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # -------------------------------------------------------------------
 
 sentry_sdk.init(
-    dsn=os.getenv("OC_LETTINGS_SENTRY_DNS"),
+    dsn=env("SENTRY_DSN_OC_LETTINGS"),
     # Add data like request headers and IP for users,
     # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
     send_default_pii=True,
