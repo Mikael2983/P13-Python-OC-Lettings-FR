@@ -99,6 +99,8 @@ jobs:
   docker:
       runs-on: ubuntu-latest
       needs: tests
+      env:
+        SENTRY_DSN_OC_LETTINGS: ${{ secrets.SENTRY_DSN_OC_LETTINGS }}
       steps:
         - uses: actions/checkout@v4
 
@@ -115,3 +117,10 @@ jobs:
             file: ./Dockerfile
             push: true
             tags: ${{ secrets.DOCKERHUB_USERNAME }}/python_lettings_fr:latest
+
+        - name: Deploy to production
+          uses: johnbeynon/render-deploy-action@v0.0.8
+          with:
+            service-id: ${{ secrets.RENDER_SERVICE_ID }}
+            api-key: ${{ secrets.RENDER_TOKEN }}
+            wait-for-success: true
