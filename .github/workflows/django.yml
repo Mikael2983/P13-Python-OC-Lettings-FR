@@ -55,8 +55,6 @@ jobs:
       DEBUG: True
 
     steps:
-      - name: check environment variable
-        run: echo "sentry_dsn_key:${{ secrets.SENTRY_DSN_OC_LETTINGS }}"
       - uses: actions/checkout@v4
 
       - name: Set up Python
@@ -103,8 +101,10 @@ jobs:
       runs-on: ubuntu-latest
       needs: tests
       env:
-        SENTRY_DSN_OC_LETTINGS: ${{ secrets.SENTRY_DSN_OC_LETTINGS }}
+        SENTRY_DSN_OC_LETTINGS: ${{ vars.test_var }}
       steps:
+        - name: check variable
+          run: echo "SENTRY_DSN:$"
         - uses: actions/checkout@v4
 
         - name: Log in to DockerHub
