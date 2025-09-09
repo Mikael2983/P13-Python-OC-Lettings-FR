@@ -101,7 +101,7 @@ jobs:
       runs-on: ubuntu-latest
       needs: tests
       env:
-        SENTRY_DSN_OC_LETTINGS: ${{ vars.test_var }}
+        SENTRY_DSN_OC_LETTINGS: ${{ vars.TEST_VAR }}
       steps:
         - name: check variable
           run: echo "SENTRY_DSN:$"
