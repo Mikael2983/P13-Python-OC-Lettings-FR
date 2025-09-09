@@ -16,15 +16,13 @@ This module contains all the configuration for the Django project, including:
 For more information, see:
 https://docs.djangoproject.com/en/3.0/topics/settings/
 """
-import environ
+from environs import env
 import os
 
 from pathlib import Path
 
 import sentry_sdk
 from django.core.management.utils import get_random_secret_key
-from sentry_sdk.integrations.django import DjangoIntegration
-
 
 # -------------------------------------------------------------------
 # Paths
@@ -37,9 +35,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # environment variables
 # -------------------------------------------------------------------
 
-env = environ.Env()
-# Take environment variables from .env file
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'), overwrite=True)
+env.read_env()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -53,7 +49,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'), overwrite=True)
 # SECURITY WARNING: keep the secret key used in production secret!
 # Raises Django's ImproperlyConfigured
 # exception if SECRET_KEY not in os.environ
-SECRET_KEY = env("OC_LETTINGS_SECRET_KEY", default=get_random_secret_key())
+SECRET_KEY = env.str("OC_LETTINGS_SECRET_KEY", default=get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=False)
