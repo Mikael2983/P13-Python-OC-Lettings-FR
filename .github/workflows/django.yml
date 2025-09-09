@@ -55,6 +55,8 @@ jobs:
       DEBUG: True
 
     steps:
+      - name: check environment variable
+        run: echo "sentry_dsn_key:${{ secrets.SENTRY_DSN_OC_LETTINGS }}"
       - uses: actions/checkout@v4
 
       - name: Set up Python
