@@ -34,7 +34,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # -------------------------------------------------------------------
 # environment variables
 # -------------------------------------------------------------------
-
+var = os.getenv("SENTRY_DSN_OC_LETTINGS")
+print(f"****************{var}*******************")
 env.read_env()
 
 # Quick-start development settings - unsuitable for production
