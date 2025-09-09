@@ -3,6 +3,7 @@ Django settings for oc_lettings_site project.
 
 This module contains all the configuration for the Django project, including:
 - Paths
+- environment variables
 - Security settings
 - Installed applications
 - Middleware

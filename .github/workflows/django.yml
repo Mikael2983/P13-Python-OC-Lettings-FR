@@ -51,6 +51,7 @@ jobs:
     needs: build
     env:
       OC_LETTINGS_SECRET_KEY: ${{ secrets.OC_LETTINGS_SECRET_KEY }}
+      SENTRY_DSN_OC_LETTINGS: ${{ secrets.SENTRY_DSN_OC_LETTINGS }}
       DEBUG: True
 
     steps:
