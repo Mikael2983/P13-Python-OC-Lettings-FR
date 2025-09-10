@@ -1,0 +1,315 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Mikael2983
+# This file is distributed under the same license as the OC_lettings
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OC_lettings \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-04 14:58+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../profiles.rst:2
+msgid "profiles package"
+msgstr "profiles package"
+
+#: ../../profiles.rst:5
+msgid "Submodules"
+msgstr "Submodules"
+
+#: ../../profiles.rst:8
+msgid "profiles.admin module"
+msgstr "profiles.admin"
+
+#: of profiles.admin:1
+msgid "Admin configuration for the profiles application."
+msgstr "Admin configuration for the profiles application."
+
+#: of profiles.admin:3
+msgid ""
+"This module registers the `Profile` model with the Django admin site so "
+"they can be managed through the admin interface."
+msgstr ""
+"This module registers the `Profile` model with the Django admin site so "
+"they can be managed through the admin interface."
+
+#: ../../profiles.rst:16
+msgid "profiles.apps module"
+msgstr "profiles.apps"
+
+#: of profiles.apps:1
+msgid "Application configuration for the profiles app."
+msgstr "Application configuration for the profiles app."
+
+#: of profiles.apps:3
+msgid ""
+"This module defines the configuration class for the profiles application, "
+"used by Django to set up application-specific settings."
+msgstr ""
+"This module defines the configuration class for the profiles application, "
+"used by Django to set up application-specific settings."
+
+#: of profiles.apps.ProfilesConfig:1
+msgid "Bases: :py:class:`~django.apps.config.AppConfig`"
+msgstr "Bases: :py:class:`~django.apps.config.AppConfig`"
+
+#: of profiles.apps.ProfilesConfig:1
+msgid "Configuration class for the profiles application."
+msgstr "Configuration class for the profiles application."
+
+#: of profiles.apps.ProfilesConfig:5
+msgid "The full Python path to the application."
+msgstr "The full Python path to the application."
+
+#: of profiles.apps.ProfilesConfig profiles.models.Profile
+msgid "type"
+msgstr "type"
+
+#: of profiles.apps.ProfilesConfig:7
+msgid "str"
+msgstr "str"
+
+#: ../../profiles.rst:24
+msgid "profiles.models module"
+msgstr "profiles.models"
+
+#: of profiles.models:1
+msgid "Models for managing user profiles."
+msgstr "Models for managing user profiles."
+
+#: of profiles.models:3
+msgid ""
+"This module defines the database schema for storing additional "
+"information related to users in the application."
+msgstr ""
+"This module defines the database schema for storing additional "
+"information related to users in the application."
+
+#: of profiles.models:6
+msgid "Classes:"
+msgstr "Classes:"
+
+#: of profiles.models:7
+msgid "Profile:"
+msgstr "Profile:"
+
+#: of profiles.models:8
+msgid ""
+"Represents a user profile extending Django's built-in User model with "
+"additional information, such as the user's favorite city."
+msgstr ""
+"Represents a user profile extending Django's built-in User model with "
+"additional information, such as the user's favorite city."
+
+#: of profiles.models:11
+msgid ""
+"The models use Django's ORM for database interaction and include "
+"validation rules for field values."
+msgstr ""
+"The models use Django's ORM for database interaction and include "
+"validation rules for field values."
+
+#: of profiles.models.Profile:1
+msgid "Bases: :py:class:`~django.db.models.base.Model`"
+msgstr "Bases: :py:class:`~django.db.models.base.Model`"
+
+#: of profiles.models.Profile:1
+msgid "Represents a user profile."
+msgstr "Represents a user profile."
+
+#: of profiles.models.Profile:5
+msgid ""
+"A one-to-one relationship to Django's built-in User model. Deleting the "
+"user will also delete the profile."
+msgstr ""
+"A one-to-one relationship to Django's built-in User model. Deleting the "
+"user will also delete the profile."
+
+#: of profiles.models.Profile:8
+msgid "OneToOneField"
+msgstr "OneToOneField"
+
+#: of profiles.models.Profile:12
+msgid "The user's preferred city, up to 64 characters."
+msgstr "The user's preferred city, up to 64 characters."
+
+#: of profiles.models.Profile:14
+msgid "CharField"
+msgstr "CharField"
+
+#: of profiles.models.Profile:19
+msgid "Returns the username of the associated user."
+msgstr "Returns the username of the associated user."
+
+#: of profiles.models.Profile.DoesNotExist:1
+msgid "Bases: :py:class:`~django.core.exceptions.ObjectDoesNotExist`"
+msgstr "Bases: :py:class:`~django.core.exceptions.ObjectDoesNotExist`"
+
+#: of profiles.models.Profile.MultipleObjectsReturned:1
+msgid "Bases: :py:class:`~django.core.exceptions.MultipleObjectsReturned`"
+msgstr "Bases: :py:class:`~django.core.exceptions.MultipleObjectsReturned`"
+
+#: ../../docstring of profiles.models.Profile.favorite_city:1
+#: profiles.models.Profile.id:1
+msgid ""
+"A wrapper for a deferred-loading field. When the value is read from this "
+"object the first time, the query is executed."
+msgstr ""
+"A wrapper for a deferred-loading field. When the value is read from this "
+"object the first time, the query is executed."
+
+#: ../../docstring of profiles.models.Profile.user:1
+msgid ""
+"Accessor to the related object on the forward side of a one-to-one "
+"relation."
+msgstr ""
+"Accessor to the related object on the forward side of a one-to-one "
+"relation."
+
+#: ../../docstring of profiles.models.Profile.user:3
+msgid "In the example::"
+msgstr "In the example::"
+
+#: ../../docstring of profiles.models.Profile.user:8
+msgid "``Restaurant.place`` is a ``ForwardOneToOneDescriptor`` instance."
+msgstr "``Restaurant.place`` is a ``ForwardOneToOneDescriptor`` instance."
+
+#: ../../profiles.rst:32
+msgid "profiles.urls module"
+msgstr "profiles.urls"
+
+#: of profiles.urls:1
+msgid "URL configuration for the profiles application."
+msgstr "URL configuration for the profiles application."
+
+#: of profiles.urls:3
+msgid ""
+"This module defines the URL patterns for the profiles app, mapping each "
+"URL path to the appropriate view function."
+msgstr ""
+"This module defines the URL patterns for the profiles app, mapping each "
+"URL path to the appropriate view function."
+
+#: of profiles.urls:6
+msgid "Routes:"
+msgstr "Routes:"
+
+#: of profiles.urls:7
+msgid "'' (root of profiles app):"
+msgstr "'' (root of profiles app):"
+
+#: of profiles.urls:8
+msgid "Displays the list of all profiles."
+msgstr "Displays the list of all profiles."
+
+#: of profiles.urls:9
+msgid "'<int:profile_id>/':"
+msgstr "'<int:profile_id>/':"
+
+#: of profiles.urls:10
+msgid "Displays details for a specific profile identified by its ID."
+msgstr "Displays details for a specific profile identified by its ID."
+
+#: ../../profiles.rst:40
+msgid "profiles.views module"
+msgstr "profiles.views"
+
+#: of profiles.views:1
+msgid "Views for the profiles application."
+msgstr "Views for the profiles application."
+
+#: of profiles.views:3
+msgid ""
+"This module contains view functions for displaying the list of profiles "
+"and the details of a specific profile."
+msgstr ""
+"This module contains view functions for displaying the list of profiles "
+"and the details of a specific profile."
+
+#: of profiles.views.index:1
+msgid "Display the list of all profiles."
+msgstr "Display the list of all profiles."
+
+#: of profiles.views.index:3
+msgid ""
+"Retrieves all `Profile` instances from the database and passes them to "
+"the `profiles/index.html` template for rendering."
+msgstr ""
+"Retrieves all `Profile` instances from the database and passes them to "
+"the `profiles/index.html` template for rendering."
+
+#: ../../profiles.rst
+msgid "Parameters"
+msgstr "Parameters"
+
+#: of profiles.views.index:6 profiles.views.profile:6
+msgid "The HTTP request object."
+msgstr "The HTTP request object."
+
+#: ../../profiles.rst
+msgid "Returns"
+msgstr "Returns"
+
+#: of profiles.views.index:9
+msgid "The rendered HTML page showing all profiles."
+msgstr "The rendered HTML page showing all profiles."
+
+#: ../../profiles.rst
+msgid "Return type"
+msgstr "Return type"
+
+#: of profiles.views.index:12 profiles.views.profile:14
+msgid "Template context:"
+msgstr "Template context:"
+
+#: of profiles.views.index:13
+msgid "profiles_list (QuerySet): A queryset containing all profiles."
+msgstr "profiles_list (QuerySet): A queryset containing all profiles."
+
+#: of profiles.views.profile:1
+msgid "Display the details of a single profile."
+msgstr "Display the details of a single profile."
+
+#: of profiles.views.profile:3
+msgid ""
+"Retrieves the `Profile` instance matching the given ID and passes its "
+"details to the `profiles/profile.html` template for rendering."
+msgstr ""
+"Retrieves the `Profile` instance matching the given ID and passes its "
+"details to the `profiles/profile.html` template for rendering."
+
+#: of profiles.views.profile:8
+msgid "The username of the profile to display."
+msgstr ""The username of the profile to display.
+
+#: of profiles.views.profile:11
+msgid "The rendered HTML page showing the profile details."
+msgstr "The rendered HTML page showing the profile details."
+
+#: of profiles.views.profile:15
+msgid ""
+"title (str): The title of the profile. address (Address): The address "
+"object related to the profile."
+msgstr ""
+"title (str): The title of the profile. address (Address): The address "
+"object related to the profile."
+
+#: ../../profiles.rst
+msgid "Raises"
+msgstr "Raises"
+
+#: of profiles.views.profile:18
+msgid "If no profile exists with the given `profile_id`."
+msgstr "If no profile exists with the given `profile_id`."
+

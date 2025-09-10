@@ -16,13 +16,11 @@ This module contains all the configuration for the Django project, including:
 For more information, see:
 https://docs.djangoproject.com/en/3.0/topics/settings/
 """
-from environs import env
 import os
-
 from pathlib import Path
-
 import sentry_sdk
 from django.core.management.utils import get_random_secret_key
+from environs import env
 
 # -------------------------------------------------------------------
 # Paths
@@ -36,7 +34,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # -------------------------------------------------------------------
 
 env.read_env()
-DEBUG = env.bool("DEBUG", False)
+DEBUG = env.bool("DEBUG", True)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/

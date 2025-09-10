@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Mikael2983
+# This file is distributed under the same license as the OC_lettings
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OC_lettings \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-10 19:24+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/technicalspecification.rst:2
+msgid "Technical Specifications"
+msgstr "Technical Specifications"
+
+#: ../../source/technicalspecification.rst:5
+msgid "Technologies"
+msgstr "Technologies"
+
+#: ../../source/technicalspecification.rst:7
+msgid "**Frameworks and Libraries**: Django, pytest, flake8, Sentry"
+msgstr "**Frameworks and Libraries**: Django, pytest, flake8, Sentry"
+
+#: ../../source/technicalspecification.rst:8
+msgid "**Programming Language**: Python 3.x"
+msgstr "**Programming Language**: Python 3.x"
+
+#: ../../source/technicalspecification.rst:9
+msgid "**Other Tools**: Docker, Git, Render (deployment)"
+msgstr "**Other Tools**: Docker, Git, Render (deployment)"
+
+#: ../../source/technicalspecification.rst:12
+msgid "Database & Models"
+msgstr "Database & Models"
+
+#: ../../source/technicalspecification.rst:14
+msgid ""
+"The project uses **SQLite** in development and can be configured with "
+"other databases in production."
+msgstr ""
+"The project uses **SQLite** in development and can be configured with "
+"other databases in production."
+
+#: ../../source/technicalspecification.rst:16
+msgid "Main models:"
+msgstr "Main models:"
+
+#: ../../source/technicalspecification.rst:18
+msgid "**Address**"
+msgstr "**Address**"
+
+#: ../../source/technicalspecification.rst:20
+#: ../../source/technicalspecification.rst:30
+#: ../../source/technicalspecification.rst:36
+msgid "Fields:"
+msgstr "Fields:"
+
+#: ../../source/technicalspecification.rst:21
+msgid "number,"
+msgstr "number,"
+
+#: ../../source/technicalspecification.rst:22
+msgid "street,"
+msgstr "street,"
+
+#: ../../source/technicalspecification.rst:23
+msgid "city,"
+msgstr ""
+
+#: ../../source/technicalspecification.rst:24
+msgid "state,"
+msgstr "state,"
+
+#: ../../source/technicalspecification.rst:25
+msgid "zip_code,"
+msgstr "zip_code,"
+
+#: ../../source/technicalspecification.rst:26
+msgid "country_iso_code"
+msgstr "country_iso_code"
+
+#: ../../source/technicalspecification.rst:27
+msgid "Represents a physical address."
+msgstr "Represents a physical address."
+
+#: ../../source/technicalspecification.rst:29
+msgid "**Letting**"
+msgstr "**Letting**"
+
+#: ../../source/technicalspecification.rst:31
+msgid "title,"
+msgstr "title,"
+
+#: ../../source/technicalspecification.rst:32
+msgid "address (ForeignKey to Address)"
+msgstr "address (ForeignKey to Address)"
+
+#: ../../source/technicalspecification.rst:33
+msgid "Represents a rental property."
+msgstr "Represents a rental property."
+
+#: ../../source/technicalspecification.rst:35
+msgid "**Profile**"
+msgstr "**Profile**"
+
+#: ../../source/technicalspecification.rst:37
+msgid "user (OneToOneField to Django User),"
+msgstr "user (OneToOneField to Django User),"
+
+#: ../../source/technicalspecification.rst:38
+msgid "favorite_city"
+msgstr "favorite_city"
+
+#: ../../source/technicalspecification.rst:39
+msgid "Extends the built-in Django user model with additional attributes."
+msgstr "Extends the built-in Django user model with additional attributes."
+
+#: ../../source/technicalspecification.rst:41
+msgid "**Relationships**:"
+msgstr "**Relationships**:"
+
+#: ../../source/technicalspecification.rst:43
+msgid "Each `Letting` is linked to one `Address`."
+msgstr "Each `Letting` is linked to one `Address`."
+
+#: ../../source/technicalspecification.rst:44
+msgid "Each `Profile` is linked to one Django `User`."
+msgstr "Each `Profile` is linked to one Django `User`."
+
+#: ../../source/technicalspecification.rst:47
+msgid "APIs & Interfaces"
+msgstr "APIs & Interfaces"
+
+#: ../../source/technicalspecification.rst:49
+msgid "The project exposes a simple set of **views and URL patterns**."
+msgstr "The project exposes a simple set of **views and URL patterns**."
+
+#: ../../source/technicalspecification.rst:51
+msgid "**oc_lettings_site**"
+msgstr "**oc_lettings_site**"
+
+#: ../../source/technicalspecification.rst:52
+msgid "`/` → Home page (index view)"
+msgstr "`/` → Home page (index view)"
+
+#: ../../source/technicalspecification.rst:54
+msgid "**lettings**"
+msgstr "**lettings**"
+
+#: ../../source/technicalspecification.rst:55
+msgid "`/lettings/` → Lettings index"
+msgstr "`/lettings/` → Lettings index"
+
+#: ../../source/technicalspecification.rst:56
+msgid "`/lettings/<int:letting_id>/` → Letting detail"
+msgstr "`/lettings/<int:letting_id>/` → Letting detail"
+
+#: ../../source/technicalspecification.rst:58
+msgid "**profiles**"
+msgstr "**profiles**"
+
+#: ../../source/technicalspecification.rst:59
+msgid "`/profiles/` → Profiles index"
+msgstr "`/profiles/` → Profiles index"
+
+#: ../../source/technicalspecification.rst:60
+msgid "`/profiles/<str:username>/` → Profile detail"
+msgstr "`/profiles/<str:username>/` → Profile detail"
+
+#: ../../source/technicalspecification.rst:62
+msgid "**Namespaces**:"
+msgstr "**Namespaces**:"
+
+#: ../../source/technicalspecification.rst:64
+msgid ""
+"`lettings` and `profiles` apps are namespaced to ensure URL clarity and "
+"modularity."
+msgstr ""
+"`lettings` and `profiles` apps are namespaced to ensure URL clarity and "
+"modularity."

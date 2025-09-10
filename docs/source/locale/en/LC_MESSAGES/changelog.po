@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Mikael2983
+# This file is distributed under the same license as the OC_lettings
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OC_lettings \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-04 14:58+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../changelog.rst:2
+msgid "Changelog"
+msgstr "Changelog"
+
+#: ../../changelog.rst:4
+msgid "All notable changes to the **OC_lettings** project are documented here."
+msgstr "All notable changes to the **OC_lettings** project are documented here."
+
+#: ../../changelog.rst:6
+msgid ""
+"The format follows `Keep a Changelog "
+"<https://keepachangelog.com/en/1.0.0/>`_ and the project adheres to "
+"`Semantic Versioning <https://semver.org/>`_."
+msgstr ""
+"The format follows `Keep a Changelog "
+"<https://keepachangelog.com/en/1.0.0/>`_ and the project adheres to "
+"`Semantic Versioning <https://semver.org/>`_."
+
+#: ../../changelog.rst:10
+msgid "[Unreleased]"
+msgstr "[Unreleased]"
+
+#: ../../changelog.rst:12
+msgid "Initial Sphinx documentation setup"
+msgstr "Initial Sphinx documentation setup"
+
+#: ../../changelog.rst:13
+msgid "Base project structure created"
+msgstr "Base project structure created"
+
+#: ../../changelog.rst:16
+msgid "[1.0.0] - 2025-09-01"
+msgstr "[1.0.0] - 2025-09-01"
+
+#: ../../changelog.rst:18
+msgid "Initial release of **OC_lettings**"
+msgstr "Initial release of **OC_lettings**"
+
+#: ../../changelog.rst:19
+msgid "Created `lettings` and `profiles` apps"
+msgstr "Created `lettings` and `profiles` apps"
+
+#: ../../changelog.rst:20
+msgid "Added basic unit tests"
+msgstr "Added basic unit tests"
+
+#: ../../changelog.rst:21
+msgid "Deployed successfully on Render"
+msgstr "Deployed successfully on Render"
+
