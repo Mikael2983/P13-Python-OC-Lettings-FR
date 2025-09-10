@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Mikael2983
+# This file is distributed under the same license as the OC_lettings
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OC_lettings \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-10 19:24+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/index.rst:30
+msgid "Contents:"
+msgstr "Contents:"
+
+#: ../../source/index.rst:7
+msgid "OC_lettings documentation"
+msgstr "OC_lettings documentation"
+
+#: ../../source/index.rst:9
+msgid ""
+"Welcome to the **OC_lettings** documentation. This project is a Django "
+"application developed as part of the **OpenClassrooms Python Developer** "
+"path."
+msgstr ""
+"Welcome to the **OC_lettings** documentation. This project is a Django "
+"application developed as part of the **OpenClassrooms Python Developer** "
+"path."
+
+#: ../../source/index.rst:12
+msgid ""
+"The application manages: - User profiles - Rental listings - Main site "
+"configuration"
+msgstr ""
+"The application manages: - User profiles - Rental listings - Main site "
+"configuration"
+
+#: ../../source/index.rst:17
+msgid ""
+"It is designed to be easily deployed on **Render**, via a Docker "
+"container available on **DockerHub**, and benefits from continuous "
+"integration using **GitHub Actions**."
+msgstr ""
+"It is designed to be easily deployed on **Render**, via a Docker "
+"container available on **DockerHub**, and benefits from continuous "
+"integration using **GitHub Actions**."
+
+#: ../../source/index.rst:23
+msgid ""
+"This documentation is generated with `Sphinx <https://www.sphinx-"
+"doc.org/en/master/>`_."
+msgstr ""
+"This documentation is generated with `Sphinx <https://www.sphinx-"
+"doc.org/en/master/>`_."
+
+#: ../../source/index.rst:28
+msgid "Documentation"
+msgstr "Documentation"
+

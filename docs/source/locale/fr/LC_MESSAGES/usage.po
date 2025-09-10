@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Mikael2983
+# This file is distributed under the same license as the OC_lettings
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OC_lettings \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-04 18:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../source/usage.rst:2
+msgid "Usage"
+msgstr "Utilisation"
+
+#: ../source/usage.rst:4
+msgid "The **OC_lettings** application offers the following features:"
+msgstr "L'application **OC_lettings** offre les fonctionnalités suivantes :"
+
+#: ../source/usage.rst:7
+msgid "Main Features"
+msgstr "Principales fonctionnalités"
+
+#: ../source/usage.rst:9
+msgid "**Home page**: site overview"
+msgstr "**Page d'accueil** : aperçu du site"
+
+#: ../source/usage.rst:10
+msgid "**Profiles**: user profile management"
+msgstr "**Profils** : gestion des profils utilisateurs"
+
+#: ../source/usage.rst:11
+msgid "**Listings**: rental property management"
+msgstr "**Annonces** : gestion immobilière locative"
+
+#: ../source/usage.rst:14
+msgid "Useful Commands"
+msgstr "Commandes utiles"
+
+#: ../source/usage.rst:16
+msgid "Run unit tests:"
+msgstr ""
+
+#: ../source/usage.rst:22
+msgid "Build documentation:"
+msgstr "Exécutez des tests :"
+
+#: ../source/usage.rst:28
+msgid "Start the local server:"
+msgstr "Démarrer le serveur local :"
+
+#: ../source/usage.rst:35
+msgid "Deployment"
+msgstr "Déploiement"
+
+#: ../source/usage.rst:37
+msgid "Two deployment options are available:"
+msgstr "Deux options de déploiement sont disponibles :"
+
+#: ../../source/usage.rst:39
+msgid "**Local deployment** (Render or classic server)"
+msgstr "**Local deployment** (Render or classic server)"
+
+#: ../../source/usage.rst:41
+msgid ""
+"For local development, environment variables are **not strictly "
+"required**. The application will run with default values if no `.env` "
+"file is present:"
+msgstr ""
+"Pour le développement local, les variables d’environnement ne sont **pas "
+"strictement nécessaires*. L’application fonctionnera avec des valeurs par "
+"défaut si aucun fichier `.env` n’est présent:"
+
+#: ../../source/usage.rst:44
+msgid "`DEBUG` → defaults to `False`"
+msgstr "`DEBUG` → par défaut `False`"
+
+#: ../../source/usage.rst:45
+msgid ""
+"`SECRET_KEY` → automatically generated (different on each run, not "
+"stable, not production-ready)"
+msgstr ""
+"`SECRET_KEY` → généré automatiquement (différent à chaque exécution, pas "
+"stable, pas prêt pour la production)"
+
+#: ../../source/usage.rst:46
+msgid ""
+"`SENTRY_DSN_OC_LETTINGS` → empty (Sentry logging disabled in local "
+"development)"
+msgstr ""
+"`SENTRY_DSN_OC_LETTINGS` → vide (journalisation Sentry désactivée dans le "
+"développement local)"
+
+#: ../../source/usage.rst:48
+msgid ""
+"This means that a developer can run the project without setting up a "
+"`.env` file."
+msgstr ""
+"Cela signifie qu’un développeur peut exécuter le projet sans configurer de "
+"fichier `.env` ."
+
+#: ../../source/usage.rst:50
+msgid ""
+"However, if you prefer a more stable development environment, you can "
+"simply **rename** the provided `.env.example` file to `.env`:"
+msgstr ""
+"Cependant, si vous préférez un environnement de développement plus stable, "
+"vous pouvez simplement **renommer** le fichier `.env.example` fourni à "
+"`.env`:"
+
+#: ../../source/usage.rst:56
+msgid ""
+"Notes: - This `.env` setup is **only for local use**. - It will not "
+"connect to Sentry (logs will not be sent). - The `SECRET_KEY` defined in "
+"`.env.example` is **not the production secret key**."
+msgstr ""
+
+#: ../source/usage.rst:62
+msgid ""
+"**DockerHub deployment** A ready-to-use Docker image is available: "
+"`mikael2983/python_lettings_fr:latest`"
+msgstr ""
+"**Déploiement DockerHub** Une image Docker prête à l'emploi est disponible : "
+"`mikael2983/python_lettings_fr:latest`"
+
+#: ../source/usage.rst:66
+msgid "Run the container locally:"
+msgstr "Exécutez le conteneur localement :"
+
+#: ../source/usage.rst:73
+msgid "Access the application at: http://127.0.0.1:8000/"
+msgstr "Accédez à l'application à l'adresse : http://127.0.0.1:8000/"

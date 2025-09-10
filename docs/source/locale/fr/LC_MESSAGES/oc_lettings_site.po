@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Mikael2983
+# This file is distributed under the same license as the OC_lettings
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OC_lettings \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-04 18:34+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../oc_lettings_site.rst:2
+msgid "oc\\_lettings\\_site package"
+msgstr "oc\\_lettings\\_site"
+
+#: ../../oc_lettings_site.rst:5
+msgid "Submodules"
+msgstr "Sous Modules"
+
+#: ../../oc_lettings_site.rst:8
+msgid "oc\\_lettings\\_site.apps module"
+msgstr "oc\\_lettings\\_site.apps"
+
+#: oc_lettings_site.apps:1 of
+msgid "App configuration for the oc_lettings_site project."
+msgstr "Configuration de l’application pour le projet oc_lettings_site."
+
+#: oc_lettings_site.apps:3 of
+msgid ""
+"This module defines the configuration class for the `oc_lettings_site` "
+"project. It specifies metadata and settings used by Django to initialize "
+"the project."
+msgstr ""
+"Ce module définit la classe de configuration pour le projet "
+"`oc_lettings_site` . Il spécifie les métadonnées et les paramètres "
+"utilisés par Django pour initialiser le projet."
+
+#: oc_lettings_site.apps:7 of
+msgid "Classes:"
+msgstr "Classes:"
+
+#: oc_lettings_site.apps:8 of
+msgid "OCLettingsSiteConfig(AppConfig):"
+msgstr "OCLettingsSiteConfig(AppConfig):"
+
+#: oc_lettings_site.apps:9 oc_lettings_site.apps.OCLettingsSiteConfig:1 of
+msgid "Configuration class for the oc_lettings_site project."
+msgstr "Classe de configuration pour le projet oc_lettings_site."
+
+#: oc_lettings_site.apps:11 of
+msgid "Attributes:"
+msgstr "Attributs"
+
+#: oc_lettings_site.apps:12 of
+msgid "name (str): The full Python path to the project."
+msgstr "name (str): Le chemin Python complet  vers le projet."
+
+#: oc_lettings_site.apps.OCLettingsSiteConfig:1 of
+msgid "Bases: :py:class:`~django.apps.config.AppConfig`"
+msgstr "Bases: :py:class:`~django.apps.config.AppConfig`"
+
+#: ../../oc_lettings_site.rst:16
+msgid "oc\\_lettings\\_site.asgi module"
+msgstr "oc\\_lettings\\_site.asgi"
+
+#: oc_lettings_site.asgi:1 of
+msgid "ASGI config for oc_lettings_site project."
+msgstr "ASGI configuration pour le projet oc_lettings_site."
+
+#: oc_lettings_site.asgi:3 of
+msgid ""
+"It exposes the ASGI callable as a module-level variable named "
+"`application`."
+msgstr ""
+"Il expose l’appelable ASGI comme une variable au niveau du module nommée "
+"`application`."
+
+#: oc_lettings_site.asgi:5 of
+msgid ""
+"For more information on this file, see "
+"https://docs.djangoproject.com/en/stable/howto/deployment/asgi/"
+msgstr ""
+"Pour plus d’informations sur ce fichier, voir: "
+"https://docs.djangoproject.com/fr/stable/howto/deployment/asgi/"
+
+#: ../../oc_lettings_site.rst:24
+msgid "oc\\_lettings\\_site.settings module"
+msgstr "oc\\_lettings\\_site.settings"
+
+#: oc_lettings_site.settings:1 of
+msgid "Django settings for oc_lettings_site project."
+msgstr "Paramètres de Django pour le projet oc_lettings_site."
+
+#: oc_lettings_site.settings:3 of
+msgid ""
+"This module contains all the configuration for the Django project, "
+"including: - Paths - Security settings - Installed applications - "
+"Middleware - Templates - Database - Authentication - Internationalization"
+" - Static files"
+msgstr ""
+"Ce module contient toute la configuration pour le projet Django, y "
+"compris: - Chemins - Paramètres de sécurité - Applications installées - "
+"Middleware - Templates - Database - Authentication - Internationalization"
+" - Fichiers statiques"
+
+#: oc_lettings_site.settings:15 of
+msgid ""
+"For more information, see: "
+"https://docs.djangoproject.com/en/3.0/topics/settings/"
+msgstr ""
+"Pour plus d’informations sur ce fichier, voir: "
+"https://docs.djangoproject.com/fr/5.2/topics/settings/"
+
+#: ../../oc_lettings_site.rst:32
+msgid "oc\\_lettings\\_site.urls module"
+msgstr "oc\\_lettings\\_site.urls"
+
+#: oc_lettings_site.urls:1 of
+msgid "URL configuration for the oc_lettings_site project."
+msgstr "Configuration des URLs pour le projet oc_lettings_site."
+
+#: oc_lettings_site.urls:3 of
+msgid ""
+"This module defines the URL routes for the entire project, including: - "
+"The home page - Django admin site - Lettings app - Profiles app - Custom "
+"error handlers for 404 and 500 HTTP errors"
+msgstr ""
+"Ce module définit les routes URL pour l’ensemble du projet, y compris: - "
+"La page d’accueil - Site d’administration Django - Application Lettings -"
+" Application Profiles - Gestionnaires d’erreurs personnalisés pour les "
+"erreurs 404 et 500 HTTP"
+
+#: oc_lettings_site.urls.trigger_error:1 of
+msgid "Intentionally triggers a server error (HTTP 500) for testing purposes."
+msgstr "Déclenche intentionnellement une erreur serveur (HTTP 500) à des fins "
+"de test."
+
+#: oc_lettings_site.urls.trigger_error:3 of
+msgid ""
+"This view function divides 1 by 0 to raise a ZeroDivisionError, which "
+"allows developers to verify error monitoring, logging, or external error "
+"tracking tools (e.g., Sentry) are working correctly."
+msgstr ""
+"Cette fonction de vue divise 1 par 0 pour générer une ZeroDivisionError, ce "
+"qui permet aux développeurs de vérifier que la surveillance des erreurs, la "
+"journalisation ou les outils externes de suivi des erreurs (par exemple, "
+"Sentry) fonctionnent correctement."
+
+#: ../../source/oc_lettings_site.rst
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: oc_lettings_site.urls.trigger_error:7 of
+msgid "The incoming HTTP request object."
+msgstr "L’objet de la requête HTTP entrante."
+
+#: ../../source/oc_lettings_site.rst
+msgid "Returns"
+msgstr "Returns"
+
+#: oc_lettings_site.urls.trigger_error:10 of
+msgid ""
+"This function does not return a valid response since it always raises an "
+"exception."
+msgstr ""
+
+#: ../../source/oc_lettings_site.rst
+msgid "Return type"
+msgstr ""
+
+#: ../../source/oc_lettings_site.rst
+msgid "Raises"
+msgstr ""
+
+#: oc_lettings_site.urls.trigger_error:14 of
+msgid "Always raised due to division by zero."
+msgstr ""
+
+#: ../../oc_lettings_site.rst:40
+msgid "oc\\_lettings\\_site.views module"
+msgstr "oc\\_lettings\\_site.views"
+
+#: oc_lettings_site.views:1 of
+msgid "Views for the main oc_lettings_site project."
+msgstr "Vues pour le projet principal oc_lettings_site."
+
+#: oc_lettings_site.views:3 of
+msgid ""
+"This module contains views for the home page and custom error pages (404 "
+"and 500)."
+msgstr ""
+"Ce module contient des vues pour la page d’accueil et les pages d’erreurs"
+" personnalisées (404 et 500)."
+
+#: oc_lettings_site.views.custom_error_404:1 of
+msgid "Handle 404 Page Not Found errors."
+msgstr "Gérer les erreurs 404 de page introuvable."
+
+#: oc_lettings_site.views.custom_error_404:3 of
+msgid ""
+"This view is used automatically by Django when a requested page does not "
+"exist."
+msgstr ""
+"Cette vue est utilisée automatiquement par Django lorsqu’une page "
+"demandée n’existe pas."
+
+#: ../../oc_lettings_site.rst
+msgid "Parameters"
+msgstr "paramètres"
+
+#: oc_lettings_site.views.custom_error_404:6
+#: oc_lettings_site.views.custom_error_500:6 oc_lettings_site.views.index:3 of
+msgid "The HTTP request object."
+msgstr "L’objet de requête HTTP."
+
+#: oc_lettings_site.views.custom_error_404:8 of
+msgid "The exception that triggered the 404."
+msgstr "L’exception qui a déclenché le 404."
+
+#: ../../oc_lettings_site.rst
+msgid "Returns"
+msgstr "Returns"
+
+#: oc_lettings_site.views.custom_error_404:11 of
+msgid "The rendered 'errors/404.html' template with HTTP status code 404."
+msgstr "Le modèle rendu 'errors/404.html' avec le code d’état HTTP 404."
+
+#: ../../oc_lettings_site.rst
+msgid "Return type"
+msgstr "Return type"
+
+#: oc_lettings_site.views.custom_error_500:1 of
+msgid "Handle 500 Internal Server Error responses."
+msgstr "Gére la réponse au code d’erreur 500 de serveur interne."
+
+#: oc_lettings_site.views.custom_error_500:3 of
+msgid ""
+"This view is used automatically by Django when an unhandled server error "
+"occurs."
+msgstr ""
+"Cette vue est utilisée automatiquement par Django lorsqu’une erreur serveur "
+"non gérée se produit."
+
+#: oc_lettings_site.views.custom_error_500:9 of
+msgid "The rendered 'errors/500.html' template with HTTP status code 500."
+msgstr "Le modèle rendu 'errors/500.html' avec le code d’état HTTP 500."
+
+#: oc_lettings_site.views.index:1 of
+msgid "Display the home page of the project."
+msgstr "Affiche la page d’accueil du projet."
+
+#: oc_lettings_site.views.index:6 of
+msgid "The rendered 'index.html' template."
+msgstr "Le modèle rendu 'index.html'."
+
+#: ../../oc_lettings_site.rst:48
+msgid "oc\\_lettings\\_site.wsgi module"
+msgstr "oc\\_lettings\\_site.wsgi"
+
+#: oc_lettings_site.wsgi:1 of
+msgid "WSGI configuration for the oc_lettings_site project."
+msgstr "Configuration WSGI pour le projet oc_lettings_site."
+
+#: oc_lettings_site.wsgi:3 of
+msgid ""
+"This module exposes the WSGI callable as a module-level variable named "
+"`application`. It serves as the entry point for WSGI-compatible web "
+"servers to serve your Django project."
+msgstr ""
+"Ce module expose l’appelable WSGI comme une variable de niveau module nommée "
+"`application`. Il sert de point d’entrée pour les serveurs web compatibles "
+"WSGI afin de servir votre projet Django"
+
+#: oc_lettings_site.wsgi:7 of
+msgid ""
+"The WSGI configuration loads the project's settings module and prepares "
+"the Django application for handling requests."
+msgstr ""
+"La configuration WSGI charge le module de paramétrage du projet et prépare "
+"l’application Django pour gérer les demandes."
+
+#: oc_lettings_site.wsgi:10 of
+msgid "Functions:"
+msgstr "Fonctions:"
+
+#: oc_lettings_site.wsgi:11 of
+msgid "get_wsgi_application:"
+msgstr "get_wsgi_application:"
+
+#: oc_lettings_site.wsgi:12 of
+msgid "Returns a WSGI callable to handle requests."
+msgstr "Retourne un WSGI appelable pour gérer les demandes."
+
+#: oc_lettings_site.wsgi:14 of
+msgid "Environment Variables:"
+msgstr "Variables d’environnement:"
+
+#: oc_lettings_site.wsgi:15 of
+msgid "DJANGO_SETTINGS_MODULE (str):"
+msgstr "DJANGO_SETTINGS_MODULE (str):"
+
+#: oc_lettings_site.wsgi:16 of
+msgid "The Python path to the settings module for this Django project."
+msgstr "Le chemin Python vers le module de configuration pour ce projet Django."
+
+#: oc_lettings_site.wsgi:19 of
+msgid "Example"
+msgstr "Exemple"
+
+#: oc_lettings_site.wsgi:20 of
+msgid "To run the application with a WSGI server such as Gunicorn:"
+msgstr "Pour exécuter l’application avec un serveur WSGI tel que Gunicorn:"
+
+#: oc_lettings_site.wsgi:22 of
+msgid "$ gunicorn oc_lettings_site.wsgi:application"
+msgstr "$ gunicorn oc_lettings_site.wsgi:application"

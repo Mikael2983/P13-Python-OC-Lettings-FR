@@ -1,0 +1,316 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Mikael2983
+# This file is distributed under the same license as the OC_lettings
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OC_lettings \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-04 14:58+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../profiles.rst:2
+msgid "profiles package"
+msgstr "package profiles"
+
+#: ../../profiles.rst:5
+msgid "Submodules"
+msgstr "Sous-Modules"
+
+#: ../../profiles.rst:8
+msgid "profiles.admin module"
+msgstr "profiles.admin"
+
+#: of profiles.admin:1
+msgid "Admin configuration for the profiles application."
+msgstr "Configuration de l’administration pour l’application profiles."
+
+#: of profiles.admin:3
+msgid ""
+"This module registers the `Profile` model with the Django admin site so "
+"they can be managed through the admin interface."
+msgstr ""
+"Ce module enregistre le modèle `Profile` avec le site d’administration de "
+"Django afin qu’ils puissent être gérés via l’interface d’administration."
+
+#: ../../profiles.rst:16
+msgid "profiles.apps module"
+msgstr "profiles.apps"
+
+#: of profiles.apps:1
+msgid "Application configuration for the profiles app."
+msgstr "Module de Configuration de l’application profiles."
+
+#: of profiles.apps:3
+msgid ""
+"This module defines the configuration class for the profiles application,"
+" used by Django to set up application-specific settings."
+msgstr ""
+"Ce module définit la classe de configuration pour l’application profiles, "
+"utilisée par Django pour configurer les paramètres spécifiques "
+"à l’application.
+
+#: of profiles.apps.ProfilesConfig:1
+msgid "Bases: :py:class:`~django.apps.config.AppConfig`"
+msgstr "Bases: :py:class:`~django.apps.config.AppConfig`"
+
+#: of profiles.apps.ProfilesConfig:1
+msgid "Configuration class for the profiles application."
+msgstr "Classe de configuration pour l’application profiles."
+
+#: of profiles.apps.ProfilesConfig:5
+msgid "The full Python path to the application."
+msgstr "Le chemin Python complet vers l’application."
+
+#: of profiles.apps.ProfilesConfig profiles.models.Profile
+msgid "type"
+msgstr "type"
+
+#: of profiles.apps.ProfilesConfig:7
+msgid "str"
+msgstr "str"
+
+#: ../../profiles.rst:24
+msgid "profiles.models module"
+msgstr "profiles.models"
+
+#: of profiles.models:1
+msgid "Models for managing user profiles."
+msgstr "Modèles de gestion des profils utilisateurs."
+
+#: of profiles.models:3
+msgid ""
+"This module defines the database schema for storing additional "
+"information related to users in the application."
+msgstr ""
+"Ce module définit le schéma de la base de données pour stocker des "
+"informations supplémentaires relatives aux utilisateurs dans l’application."
+
+#: of profiles.models:6
+msgid "Classes:"
+msgstr "Classes:"
+
+#: of profiles.models:7
+msgid "Profile:"
+msgstr "Profile:"
+
+#: of profiles.models:8
+msgid ""
+"Represents a user profile extending Django's built-in User model with "
+"additional information, such as the user's favorite city."
+msgstr ""
+"Représente un profil utilisateur qui étend le modèle d’utilisateur intégré "
+"de Django avec des informations supplémentaires, comme la ville préférée de "
+"l’utilisateur."
+
+#: of profiles.models:11
+msgid ""
+"The models use Django's ORM for database interaction and include "
+"validation rules for field values."
+msgstr ""
+"Les modèles utilisent l’ORM de Django pour l’interaction avec la base de "
+"données et incluent des règles de validation pour les valeurs de champ."
+
+#: of profiles.models.Profile:1
+msgid "Bases: :py:class:`~django.db.models.base.Model`"
+msgstr "Bases: :py:class:`~django.db.models.base.Model`"
+
+#: of profiles.models.Profile:1
+msgid "Represents a user profile."
+msgstr "Représente un profil utilisateur."
+
+#: of profiles.models.Profile:5
+msgid ""
+"A one-to-one relationship to Django's built-in User model. Deleting the "
+"user will also delete the profile."
+msgstr ""
+"Une relation un à un avec le modèle d’utilisateur intégré de Django. "
+"Supprimer l’utilisateur supprimera également le profil."
+
+#: of profiles.models.Profile:8
+msgid "OneToOneField"
+msgstr "OneToOneField"
+
+#: of profiles.models.Profile:12
+msgid "The user's preferred city, up to 64 characters."
+msgstr "La ville préférée de l’utilisateur, jusqu’à 64 caractères."
+
+#: of profiles.models.Profile:14
+msgid "CharField"
+msgstr "CharField"
+
+#: of profiles.models.Profile:19
+msgid "Returns the username of the associated user."
+msgstr "Renvoie le nom d’utilisateur de l’utilisateur associé."
+
+#: of profiles.models.Profile.DoesNotExist:1
+msgid "Bases: :py:class:`~django.core.exceptions.ObjectDoesNotExist`"
+msgstr "Bases: :py:class:`~django.core.exceptions.ObjectDoesNotExist`"
+
+#: of profiles.models.Profile.MultipleObjectsReturned:1
+msgid "Bases: :py:class:`~django.core.exceptions.MultipleObjectsReturned`"
+msgstr "Bases: :py:class:`~django.core.exceptions.MultipleObjectsReturned`"
+
+#: ../../docstring of profiles.models.Profile.favorite_city:1
+#: profiles.models.Profile.id:1
+msgid ""
+"A wrapper for a deferred-loading field. When the value is read from this "
+"object the first time, the query is executed."
+msgstr ""
+"Un wrapper pour un champ à chargement différé. Lorsque la valeur est lue "
+"depuis cet objet pour la première fois, la requête est exécutée."
+
+#: ../../docstring of profiles.models.Profile.user:1
+msgid ""
+"Accessor to the related object on the forward side of a one-to-one "
+"relation."
+msgstr ""
+"Accès à l’objet lié au verso d’une relation one-to-one."
+
+#: ../../docstring of profiles.models.Profile.user:3
+msgid "In the example::"
+msgstr "dans l'exemple::"
+
+#: ../../docstring of profiles.models.Profile.user:8
+msgid "``Restaurant.place`` is a ``ForwardOneToOneDescriptor`` instance."
+msgstr "``Place.restaurant`` est une instance ``ReverseOneToOneDescriptor”."
+
+#: ../../profiles.rst:32
+msgid "profiles.urls module"
+msgstr "profiles.urls"
+
+#: of profiles.urls:1
+msgid "URL configuration for the profiles application."
+msgstr "Configuration des URLs pour l’application profiles."
+
+#: of profiles.urls:3
+msgid ""
+"This module defines the URL patterns for the profiles app, mapping each "
+"URL path to the appropriate view function."
+msgstr ""
+"Ce module définit les modèles d’URL pour l’application profiles, en "
+"mappant chaque chemin d’URL à la fonction de vue appropriée."
+
+#: of profiles.urls:6
+msgid "Routes:"
+msgstr "Routes"
+
+#: of profiles.urls:7
+msgid "'' (root of profiles app):"
+msgstr "'' (racine de l'application profiles):"
+
+#: of profiles.urls:8
+msgid "Displays the list of all profiles."
+msgstr "Afficher la liste de tous les profils."
+
+#: of profiles.urls:9
+msgid "'<int:profile_id>/':"
+msgstr "'<int:profile_id>/':"
+
+#: of profiles.urls:10
+msgid "Displays details for a specific profile identified by its ID."
+msgstr ""
+"Affiche les détails d’un profil spécifique identifié par son identifiant."
+
+#: ../../profiles.rst:40
+msgid "profiles.views module"
+msgstr "profiles.views"
+
+#: of profiles.views:1
+msgid "Views for the profiles application."
+msgstr "Vues pour l’application profiles."
+
+#: of profiles.views:3
+msgid ""
+"This module contains view functions for displaying the list of profiles "
+"and the details of a specific profile."
+msgstr ""
+"Ce module contient des fonctions de visualisation pour afficher la liste "
+"des profils et les détails d’un profil spécifique."
+
+#: of profiles.views.index:1
+msgid "Display the list of all profiles."
+msgstr "Afficher la liste de toutes les profils."
+
+#: of profiles.views.index:3
+msgid ""
+"Retrieves all `Profile` instances from the database and passes them to "
+"the `profiles/index.html` template for rendering."
+msgstr ""
+"Récupère toutes les instances `Profile` de la base de données et les "
+"passe au modèle `profiles/index.html` pour le rendu."
+
+#: ../../profiles.rst
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: of profiles.views.index:6 profiles.views.profile:6
+msgid "The HTTP request object."
+msgstr "L’objet de requête HTTP."
+
+#: ../../profiles.rst
+msgid "Returns"
+msgstr "Returns"
+
+#: of profiles.views.index:9
+msgid "The rendered HTML page showing all profiles."
+msgstr "La page HTML rendue montrant tous les profils."
+
+#: ../../profiles.rst
+msgid "Return type"
+msgstr "Return type"
+
+#: of profiles.views.index:12 profiles.views.profile:14
+msgid "Template context:"
+msgstr "Contexte du modèle:"
+
+#: of profiles.views.index:13
+msgid "profiles_list (QuerySet): A queryset containing all profiles."
+msgstr "profiles_list (QuerySet): une queryset contenant tous les profils."
+
+#: of profiles.views.profile:1
+msgid "Display the details of a single profile."
+msgstr "Afficher les détails d’un seul profil."
+
+#: of profiles.views.profile:3
+msgid ""
+"Retrieves the `Profile` instance matching the given ID and passes its "
+"details to the `profiles/profile.html` template for rendering."
+msgstr ""
+"Récupère l’instance `Profile` correspondant à l’ID donné et passe ses "
+"détails au modèle `profiles/profile.html` pour le rendu."
+
+#: of profiles.views.profile:8
+msgid "The username of the profile to display."
+msgstr "Le pseudo du profil à afficher"
+
+#: of profiles.views.profile:11
+msgid "The rendered HTML page showing the profile details."
+msgstr "La page HTML rendue montrant les détails du profil."
+
+#: of profiles.views.profile:15
+msgid ""
+"title (str): The title of the profile. address (Address): The address "
+"object related to the profile."
+msgstr ""
+"title (str): Le titre du profil. address (Address): L’objet address lié au "
+"profil."
+
+#: ../../profiles.rst
+msgid "Raises"
+msgstr "Raises"
+
+#: of profiles.views.profile:18
+msgid "If no profile exists with the given `profile_id`."
+msgstr "Si aucun profil n’existe avec le `profile_id`donné."
