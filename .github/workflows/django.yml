@@ -100,11 +100,7 @@ jobs:
   docker:
       runs-on: ubuntu-latest
       needs: tests
-      env:
-        SENTRY_DSN_OC_LETTINGS: ${{ vars.TEST_VAR }}
       steps:
-        - name: check variable
-          run: echo "SENTRY_DSN:${{ vars.TEST_VAR }}"
         - uses: actions/checkout@v4
 
         - name: Log in to DockerHub
@@ -126,4 +122,3 @@ jobs:
           with:
             service-id: ${{ secrets.RENDER_SERVICE_ID }}
             api-key: ${{ secrets.RENDER_TOKEN }}
-            wait-for-success: true
