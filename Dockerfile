@@ -1,4 +1,4 @@
-# choisir une image Python
+# Choisir une image Python
 FROM python:3.12-slim
 
 # Définir le répertoire de travail
@@ -17,6 +17,8 @@ COPY . .
 # Exposer le port 8000 pour Django
 EXPOSE 8000
 
+# Définir la variable DEBUG par défaut
 ENV DEBUG=False
 
-CMD ["sh", "-c", "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn oc_lettings_site.wsgi:application --bind 127.0.0.1:8000"]
+# CMD qui applique les migrations, collecte les fichiers statiques et lance Gunicorn
+CMD ["sh", "-c", "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn oc_lettings_site.wsgi:application --bind 0.0.0.0:8000"]

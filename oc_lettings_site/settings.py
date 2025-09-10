@@ -185,7 +185,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # -------------------------------------------------------------------
 
 sentry_sdk.init(
-    dsn=env("SENTRY_DSN_OC_LETTINGS"),
+    dsn=env.str("SENTRY_DSN_OC_LETTINGS", default=""),
     # Add data like request headers and IP for users,
     # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
     send_default_pii=True,
