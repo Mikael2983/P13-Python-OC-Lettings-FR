@@ -41,7 +41,7 @@ Two deployment options are available:
     For local development, environment variables are **not strictly required**.
     The application will run with default values if no `.env` file is present:
 
-    - `DEBUG` → defaults to `False`
+    - `DEBUG` → defaults to `True`
     - `SECRET_KEY` → automatically generated (different on each run, not stable, not production-ready)
     - `SENTRY_DSN_OC_LETTINGS` → empty (Sentry logging disabled in local development)
 

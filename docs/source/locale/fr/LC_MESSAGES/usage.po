@@ -83,8 +83,8 @@ msgstr ""
 "défaut si aucun fichier `.env` n’est présent:"
 
 #: ../../source/usage.rst:44
-msgid "`DEBUG` → defaults to `False`"
-msgstr "`DEBUG` → par défaut `False`"
+msgid "`DEBUG` → defaults to `True`"
+msgstr "`DEBUG` → par défaut `True`"
 
 #: ../../source/usage.rst:45
 msgid ""
