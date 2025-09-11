@@ -30,7 +30,7 @@ msgstr "Technologies"
 
 #: ../../source/technicalspecification.rst:7
 msgid "**Frameworks and Libraries**: Django, pytest, flake8, Sentry"
-msgstr "*Frameworks et bibliothèques**: Django, pytest, flake8, Sentry"
+msgstr "**Frameworks et bibliothèques**: Django, pytest, flake8, Sentry"
 
 #: ../../source/technicalspecification.rst:8
 msgid "**Programming Language**: Python 3.x"
