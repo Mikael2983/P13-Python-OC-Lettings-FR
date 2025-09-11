@@ -99,7 +99,7 @@ jobs:
 
   docker:
       needs: tests
-      if: github.ref == 'refs/heads/main'  # Only runs on main
+      if: github.ref == 'refs/heads/master'  # Only runs on master
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
