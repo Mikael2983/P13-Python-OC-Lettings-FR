@@ -16,11 +16,16 @@ This module contains all the configuration for the Django project, including:
 For more information, see:
 https://docs.djangoproject.com/en/3.0/topics/settings/
 """
+
+
+import logging
 import os
 from pathlib import Path
+
 import sentry_sdk
 from django.core.management.utils import get_random_secret_key
 from environs import env
+from sentry_sdk.integrations.logging import LoggingIntegration
 
 # -------------------------------------------------------------------
 # Paths
@@ -51,8 +56,7 @@ DEBUG = env.bool("DEBUG", True)
 SECRET_KEY = env.str("OC_LETTINGS_SECRET_KEY", default=get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
-ALLOWED_HOSTS = ['localhost',
+OSTS = ['localhost',
                  '127.0.0.1',
                  'p13-python-oc-lettings-fr.onrender.com']
 
@@ -174,18 +178,19 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
 # -------------------------------------------------------------------
 # Sentry logging
 # -------------------------------------------------------------------
 
+sentry_logging = LoggingIntegration(
+    level=logging.INFO,
+    event_level=logging.ERROR
+)
+
 sentry_sdk.init(
     dsn=env.str("SENTRY_DSN_OC_LETTINGS", default=""),
-    # Add data like request headers and IP for users,
-    # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
     send_default_pii=True,
-    # Set traces_sample_rate to 1.0 to capture 100%
-    # of transactions for tracing.
+    integrations=[sentry_logging],
     traces_sample_rate=1.0,
 )
 
@@ -195,7 +200,7 @@ LOGGING = {
     "handlers": {
         "sentry": {
             "level": "INFO",
-            "class": "logging.NullHandler",
+            "class": "sentry_sdk.integrations.logging.EventHandler",
         },
     },
     "root": {
