@@ -14,7 +14,6 @@ from django.urls import path
 
 from . import views
 
-
 # List of URL patterns for the lettings app
 urlpatterns = [
     path('', views.index, name='lettings_index'),

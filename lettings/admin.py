@@ -8,8 +8,8 @@ site so they can be managed through the admin interface.
 from django.contrib import admin
 
 from lettings.models import Letting
-from .models import Address
 
+from .models import Address
 
 admin.site.register(Letting)
 admin.site.register(Address)

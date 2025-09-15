@@ -13,8 +13,8 @@ The models use Django's ORM for database interaction and include
 validation rules for field values.
 """
 
-from django.db import models
 from django.contrib.auth.models import User
+from django.db import models
 
 
 class Profile(models.Model):

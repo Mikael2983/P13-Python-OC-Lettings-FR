@@ -5,7 +5,8 @@ This module contains view functions for displaying the list of lettings
 and the details of a specific letting.
 """
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404, render
+
 from lettings.models import Letting
 
 

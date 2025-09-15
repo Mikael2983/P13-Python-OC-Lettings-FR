@@ -15,8 +15,8 @@ Classes:
 The models use Django's ORM for database interaction and include
 validation rules for field values.
 """
-from django.db import models
 from django.core.validators import MaxValueValidator, MinLengthValidator
+from django.db import models
 
 
 class Address(models.Model):

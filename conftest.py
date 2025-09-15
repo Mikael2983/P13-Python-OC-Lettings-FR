@@ -1,7 +1,7 @@
 import pytest
 from django.contrib.auth.models import User
 
-from lettings.models import Letting, Address
+from lettings.models import Address, Letting
 from profiles.models import Profile
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
