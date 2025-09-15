@@ -57,7 +57,7 @@ DEBUG = env.bool("DEBUG", True)
 SECRET_KEY = env.str("OC_LETTINGS_SECRET_KEY", default=get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-OSTS = ['localhost',
+ALLOWED_HOSTS = ['localhost',
                  '127.0.0.1',
                  'p13-python-oc-lettings-fr.onrender.com']
 
