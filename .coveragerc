@@ -1,0 +1,16 @@
+[run]
+source =
+    lettings
+    profiles
+    oc_lettings_site
+omit =
+    */tests/*
+    */migrations/*
+    */manage.py
+    */__init__.py
+    */settings.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    raise NotImplementedError
