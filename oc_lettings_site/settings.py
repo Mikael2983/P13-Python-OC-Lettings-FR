@@ -26,6 +26,7 @@ import sentry_sdk
 from django.core.management.utils import get_random_secret_key
 from environs import env
 from sentry_sdk.integrations.logging import LoggingIntegration
+from sentry_sdk.integrations.django import DjangoIntegration
 
 # -------------------------------------------------------------------
 # Paths
@@ -189,33 +190,65 @@ sentry_logging = LoggingIntegration(
 
 sentry_sdk.init(
     dsn=env.str("SENTRY_DSN_OC_LETTINGS", default=""),
-    send_default_pii=True,
-    integrations=[sentry_logging],
+    integrations=[DjangoIntegration(), sentry_logging],
     traces_sample_rate=1.0,
+    send_default_pii=True,
 )
 
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {message}",
+            "style": "{",
+        },
+    },
     "handlers": {
         "sentry": {
             "level": "INFO",
             "class": "sentry_sdk.integrations.logging.EventHandler",
+            "formatter": "verbose",
+        },
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter": "verbose",
         },
     },
     "root": {
-        "level": "ERROR",
-        "handlers": ["sentry"],
+        "level": "INFO",
+        "handlers": ["sentry", "console"],
     },
     "loggers": {
-        "django.request": {
+        "django": {
             "level": "INFO",
-            "handlers": ["sentry"],
+            "handlers": ["sentry", "console"],
             "propagate": False,
         },
-        "django.security.DisallowedHost": {
+        "django.request": {
+            "level": "INFO",
+            "handlers": ["sentry", "console"],
+            "propagate": False,
+        },
+        "django.security": {
             "level": "ERROR",
-            "handlers": ["sentry"],
+            "handlers": ["sentry", "console"],
+            "propagate": False,
+        },
+        "lettings": {
+            "level": "INFO",
+            "handlers": ["sentry", "console"],
+            "propagate": False,
+        },
+        "profiles": {
+            "level": "INFO",
+            "handlers": ["sentry", "console"],
+            "propagate": False,
+        },
+        "oc_lettings_site": {
+            "level": "INFO",
+            "handlers": ["sentry", "console"],
             "propagate": False,
         },
     },
