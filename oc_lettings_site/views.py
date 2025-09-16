@@ -4,9 +4,13 @@ Views for the main oc_lettings_site project.
 This module contains views for the home page and custom error pages
 (404 and 500).
 """
+import logging
+
+import sentry_sdk
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
+logger = logging.getLogger(__name__)
 
 def index(request: HttpRequest) -> HttpResponse:
     """
@@ -35,6 +39,8 @@ def custom_error_404(request: HttpRequest, exception: Exception) -> HttpResponse
     Returns:
         HttpResponse: The rendered 'errors/404.html' template with HTTP status code 404.
 """
+    logger.error(f"404 Not Found: {request.path}")
+    sentry_sdk.capture_exception(exception)
     return render(request, "errors/404.html", status=404)
 
 
