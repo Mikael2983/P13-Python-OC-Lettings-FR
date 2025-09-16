@@ -6,11 +6,11 @@ This module contains views for the home page and custom error pages
 """
 import logging
 
-import sentry_sdk
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
 logger = logging.getLogger(__name__)
+
 
 def index(request: HttpRequest) -> HttpResponse:
     """
