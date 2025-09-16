@@ -221,35 +221,11 @@ LOGGING = {
         "handlers": ["sentry", "console"],
     },
     "loggers": {
-        "django": {
-            "level": "INFO",
-            "handlers": ["sentry", "console"],
-            "propagate": False,
-        },
-        "django.request": {
-            "level": "INFO",
-            "handlers": ["sentry", "console"],
-            "propagate": False,
-        },
-        "django.security": {
-            "level": "ERROR",
-            "handlers": ["sentry", "console"],
-            "propagate": False,
-        },
-        "lettings": {
-            "level": "INFO",
-            "handlers": ["sentry", "console"],
-            "propagate": False,
-        },
-        "profiles": {
-            "level": "INFO",
-            "handlers": ["sentry", "console"],
-            "propagate": False,
-        },
-        "oc_lettings_site": {
-            "level": "INFO",
-            "handlers": ["sentry", "console"],
-            "propagate": False,
-        },
+        "django": {"level": "INFO", "propagate": True},
+        "django.request": {"level": "INFO", "propagate": True},
+        "django.security": {"level": "ERROR", "propagate": True},
+        "lettings": {"level": "INFO", "propagate": True},
+        "profiles": {"level": "INFO", "propagate": True},
+        "oc_lettings_site": {"level": "INFO", "propagate": True},
     },
 }
