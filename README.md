@@ -59,15 +59,7 @@ python manage.py runserver
 ```
 Aller sur http://localhost:8000 dans un navigateur.
 
-
 Confirmer que le site fonctionne et qu'il est possible de naviguer (vous devriez voir plusieurs profils et locations).
-
-```bash
-.tables
-pragma table_info(oc_lettings_profile);
-SELECT * FROM oc_lettings_profile LIMIT 5;
-.quit
-```
 
 ### 🧹 Linting
 ```bash
@@ -160,7 +152,8 @@ Python-OC-Lettings-FR/
 ### 🐳 Déploiement avec Docker
 
 Une image Docker prête à l’emploi est disponible: mikael2983/python_lettings_fr:latest
-Elle est automatiquement mise à jour à chaque commit ou pull request sur la branche main
+Elle est automatiquement mise à jour à chaque commit ou pull request sur la branche main.
+
 Exécutez le conteneur localement:
 ```bash
 docker pull mikael2983/python_lettings_fr:latest
