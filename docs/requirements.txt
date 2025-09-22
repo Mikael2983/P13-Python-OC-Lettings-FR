@@ -1,7 +1,7 @@
 sphinx>=8.0.0
 furo
 sphinx-intl
-django==5.2.2
+django==5.2.6
 environs==14.3.0
 flake8==7.3.0
 gunicorn==23.0.0
