@@ -32,7 +32,7 @@ extensions = [
     'sphinx.ext.viewcode',
     ]
 
-locale_dirs = ['source/locale/']   # dossier où seront les fichiers de traduction
+locale_dirs = ['locale/']   # dossier où seront les fichiers de traduction
 gettext_compact = False
 
 templates_path = ['_templates']
