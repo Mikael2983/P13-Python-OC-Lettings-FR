@@ -1,0 +1,398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Mikael2983
+# This file is distributed under the same license as the OC_lettings
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OC_lettings \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-04 18:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../lettings.rst:2
+msgid "lettings package"
+msgstr "lettings package"
+
+#: ../../lettings.rst:5
+msgid "Submodules"
+msgstr "Submodules"
+
+#: ../../lettings.rst:8
+msgid "lettings.admin module"
+msgstr "lettings.admin"
+
+#: lettings.admin:1 of
+msgid "Admin configuration for the lettings application."
+msgstr "Admin configuration for the lettings application."
+
+#: lettings.admin:3 of
+msgid ""
+"This module registers the `Letting` and `Address` models with the Django "
+"admin site so they can be managed through the admin interface."
+msgstr ""
+"This module registers the `Letting` and `Address` models with the Django "
+"admin site so they can be managed through the admin interface."
+
+#: ../../lettings.rst:16
+msgid "lettings.apps module"
+msgstr "lettings.apps"
+
+#: lettings.apps:1 of
+msgid "Application configuration for the lettings app."
+msgstr "Application configuration for the lettings app."
+
+#: lettings.apps:3 of
+msgid ""
+"This module defines the configuration class for the lettings application,"
+" used by Django to set up application-specific settings."
+msgstr ""
+"This module defines the configuration class for the lettings application,"
+" used by Django to set up application-specific settings."
+
+#: lettings.apps.LettingsConfig:1 of
+msgid "Bases: :py:class:`~django.apps.config.AppConfig`"
+msgstr "Bases: :py:class:`~django.apps.config.AppConfig`"
+
+#: lettings.apps.LettingsConfig:1 of
+msgid "Configuration class for the lettings application."
+msgstr "Configuration class for the lettings application."
+
+#: lettings.apps.LettingsConfig:5 of
+msgid "The full Python path to the application."
+msgstr "The full Python path to the application."
+
+#: lettings.apps.LettingsConfig lettings.models.Address lettings.models.Letting
+#: of
+msgid "type"
+msgstr "type"
+
+#: lettings.apps.LettingsConfig:7 of
+msgid "str"
+msgstr "str"
+
+#: ../../lettings.rst:24
+msgid "lettings.models module"
+msgstr "lettings.models"
+
+#: lettings.models:1 of
+msgid "Models for managing property lettings and their associated addresses."
+msgstr "Models for managing property lettings and their associated addresses."
+
+#: lettings.models:3 of
+msgid ""
+"This module defines the database schema for storing information about "
+"addresses and property lettings in the application."
+msgstr ""
+"This module defines the database schema for storing information about "
+"addresses and property lettings in the application."
+
+#: lettings.models:6 of
+msgid "Classes:"
+msgstr "Classes:"
+
+#: lettings.models:7 of
+msgid "Address:"
+msgstr "Address:"
+
+#: lettings.models:8 of
+msgid ""
+"Represents a postal address with number, street, city, state, zip code, "
+"and country ISO code."
+msgstr ""
+"Represents a postal address with number, street, city, state, zip code, "
+"and country ISO code."
+
+#: lettings.models:11 of
+msgid "Letting:"
+msgstr "Letting:"
+
+#: lettings.models:12 of
+msgid "Represents a property letting with a title and associated address."
+msgstr "Represents a property letting with a title and associated address."
+
+#: lettings.models:14 of
+msgid ""
+"The models use Django's ORM for database interaction and include "
+"validation rules for field values."
+msgstr ""
+"The models use Django's ORM for database interaction and include "
+"validation rules for field values."
+
+#: lettings.models.Address:1 lettings.models.Letting:1 of
+msgid "Bases: :py:class:`~django.db.models.base.Model`"
+msgstr "Bases: :py:class:`~django.db.models.base.Model`"
+
+#: lettings.models.Address:1 of
+msgid "Represents a postal address."
+msgstr "Represents a postal address."
+
+#: lettings.models.Address:5 of
+msgid "Street number, must be between 1 and 9999."
+msgstr "Street number, must be between 1 and 9999."
+
+#: lettings.models.Address:8 lettings.models.Address:33 of
+msgid "PositiveIntegerField"
+msgstr "PositiveIntegerField"
+
+#: lettings.models.Address:12 of
+msgid "Street name, up to 64 characters."
+msgstr "Street name, up to 64 characters."
+
+#: lettings.models.Address:14 lettings.models.Address:20
+#: lettings.models.Address:27 lettings.models.Address:40
+#: lettings.models.Letting:8 of
+msgid "CharField"
+msgstr "CharField"
+
+#: lettings.models.Address:18 of
+msgid "City name, up to 64 characters."
+msgstr "City name, up to 64 characters."
+
+#: lettings.models.Address:24 of
+msgid "State code (2 characters), must be exactly 2 characters."
+msgstr "State code (2 characters), must be exactly 2 characters."
+
+#: lettings.models.Address:31 of
+msgid "Postal code, up to 5 digits."
+msgstr "Postal code, up to 5 digits."
+
+#: lettings.models.Address:37 of
+msgid "Country ISO code (3 characters), must be exactly 3 characters."
+msgstr "Country ISO code (3 characters), must be exactly 3 characters."
+
+#: lettings.models.Address:42 of
+msgid "Meta:"
+msgstr "Meta:"
+
+#: lettings.models.Address:43 of
+msgid ""
+"verbose_name (str): a singular name. verbose_name_plural (str): a plural "
+"name."
+msgstr ""
+"verbose_name (str): a singular name. verbose_name_plural (str): a plural "
+"name."
+
+#: lettings.models.Address:48 of
+msgid ""
+"Returns a string representation of the address in the format \"<number> "
+"<street>\"."
+msgstr ""
+"Returns a string representation of the address in the format \"<number> "
+"<street>\"."
+
+#: lettings.models.Address.DoesNotExist:1
+#: lettings.models.Letting.DoesNotExist:1 of
+msgid "Bases: :py:class:`~django.core.exceptions.ObjectDoesNotExist`"
+msgstr "Bases: :py:class:`~django.core.exceptions.ObjectDoesNotExist`"
+
+#: lettings.models.Address.MultipleObjectsReturned:1
+#: lettings.models.Letting.MultipleObjectsReturned:1 of
+msgid "Bases: :py:class:`~django.core.exceptions.MultipleObjectsReturned`"
+msgstr "Bases: :py:class:`~django.core.exceptions.MultipleObjectsReturned`"
+
+#: ../../docstring lettings.models.Address.city:1
+#: lettings.models.Address.country_iso_code:1 lettings.models.Address.id:1
+#: lettings.models.Address.number:1 lettings.models.Address.state:1
+#: lettings.models.Address.street:1 lettings.models.Address.zip_code:1
+#: lettings.models.Letting.id:1 lettings.models.Letting.title:1 of
+msgid ""
+"A wrapper for a deferred-loading field. When the value is read from this "
+"object the first time, the query is executed."
+msgstr ""
+"A wrapper for a deferred-loading field. When the value is read from this "
+"object the first time, the query is executed."
+
+#: ../../docstring lettings.models.Address.letting:1 of
+msgid ""
+"Accessor to the related object on the reverse side of a one-to-one "
+"relation."
+msgstr ""
+"Accessor to the related object on the reverse side of a one-to-one "
+"relation."
+
+#: ../../docstring lettings.models.Address.letting:4
+#: lettings.models.Letting.address:3 of
+msgid "In the example:"
+msgstr "In the example:"
+
+#: ../../docstring lettings.models.Address.letting:9 of
+msgid "``Place.restaurant`` is a ``ReverseOneToOneDescriptor`` instance."
+msgstr "``Place.restaurant`` is a ``ReverseOneToOneDescriptor`` instance."
+
+#: lettings.models.Letting:1 of
+msgid "Represents a property letting."
+msgstr "Represents a property letting."
+
+#: lettings.models.Letting:5 of
+msgid "The title or name of the letting, up to 256 characters."
+msgstr "The title or name of the letting, up to 256 characters."
+
+#: lettings.models.Letting:12 of
+msgid ""
+"A one-to-one relationship to an Address instance, representing the "
+"location of the letting. Deleting the address will also delete the "
+"letting."
+msgstr ""
+"A one-to-one relationship to an Address instance, representing the "
+"location of the letting. Deleting the address will also delete the "
+"letting."
+
+#: lettings.models.Letting:16 of
+msgid "OneToOneField"
+msgstr "OneToOneField"
+
+#: lettings.models.Letting:20 of
+msgid "Returns the title of the letting."
+msgstr "Returns the title of the letting."
+
+#: ../../docstring lettings.models.Letting.address:1 of
+msgid ""
+"Accessor to the related object on the forward side of a one-to-one "
+"relation."
+msgstr ""
+"Accessor to the related object on the forward side of a one-to-one "
+"relation."
+
+#: ../../docstring lettings.models.Letting.address:8 of
+msgid "``Restaurant.place`` is a ``ForwardOneToOneDescriptor`` instance."
+msgstr "``Restaurant.place`` is a ``ForwardOneToOneDescriptor`` instance."
+
+#: ../../lettings.rst:32
+msgid "lettings.urls module"
+msgstr "lettings.urls"
+
+#: lettings.urls:1 of
+msgid "URL configuration for the lettings application."
+msgstr "URL configuration for the lettings application."
+
+#: lettings.urls:3 of
+msgid ""
+"This module defines the URL patterns for the lettings app, mapping each "
+"URL path to the appropriate view function."
+msgstr ""
+"This module defines the URL patterns for the lettings app, mapping each "
+"URL path to the appropriate view function."
+
+#: lettings.urls:6 of
+msgid "Routes:"
+msgstr "Routes:"
+
+#: lettings.urls:7 of
+msgid "'' (root of lettings app):"
+msgstr "'' (root of lettings app):"
+
+#: lettings.urls:8 of
+msgid "Displays the list of all lettings."
+msgstr "Displays the list of all lettings."
+
+#: lettings.urls:9 of
+msgid "'<int:letting_id>/':"
+msgstr "'<int:letting_id>/':"
+
+#: lettings.urls:10 of
+msgid "Displays details for a specific letting identified by its ID."
+msgstr "Displays details for a specific letting identified by its ID."
+
+#: ../../lettings.rst:40
+msgid "lettings.views module"
+msgstr "lettings.views"
+
+#: lettings.views:1 of
+msgid "Views for the lettings application."
+msgstr "Views for the lettings application."
+
+#: lettings.views:3 of
+msgid ""
+"This module contains view functions for displaying the list of lettings "
+"and the details of a specific letting."
+msgstr ""
+"This module contains view functions for displaying the list of lettings "
+"and the details of a specific letting."
+
+#: lettings.views.index:1 of
+msgid "Display the list of all lettings."
+msgstr ""
+
+#: lettings.views.index:3 of
+msgid ""
+"Retrieves all `Letting` instances from the database and passes them to "
+"the `lettings/index.html` template for rendering."
+msgstr ""
+"Retrieves all `Letting` instances from the database and passes them to "
+"the `lettings/index.html` template for rendering."
+
+#: ../../lettings.rst
+msgid "Parameters"
+msgstr "Parameters"
+
+#: lettings.views.index:6 lettings.views.letting:6 of
+msgid "The HTTP request object."
+msgstr "The HTTP request object."
+
+#: ../../lettings.rst
+msgid "Returns"
+msgstr "Returns"
+
+#: lettings.views.index:9 of
+msgid "The rendered HTML page showing all lettings."
+msgstr "The rendered HTML page showing all lettings."
+
+#: ../../lettings.rst
+msgid "Return type"
+msgstr "Return type"
+
+#: lettings.views.index:12 lettings.views.letting:14 of
+msgid "Template context:"
+msgstr "Template context:"
+
+#: lettings.views.index:13 of
+msgid "lettings_list (QuerySet): A queryset containing all lettings."
+msgstr "lettings_list (QuerySet): A queryset containing all lettings."
+
+#: lettings.views.letting:1 of
+msgid "Display the details of a single letting."
+msgstr "Display the details of a single letting."
+
+#: lettings.views.letting:3 of
+msgid ""
+"Retrieves the `Letting` instance matching the given ID and passes its "
+"details to the `lettings/letting.html` template for rendering."
+msgstr ""
+"Retrieves the `Letting` instance matching the given ID and passes its "
+"details to the `lettings/letting.html` template for rendering."
+
+#: lettings.views.letting:8 of
+msgid "The primary key of the letting to display."
+msgstr "The primary key of the letting to display."
+
+#: lettings.views.letting:11 of
+msgid "The rendered HTML page showing the letting details."
+msgstr "The rendered HTML page showing the letting details."
+
+#: lettings.views.letting:15 of
+msgid ""
+"title (str): The title of the letting. address (Address): The address "
+"object related to the letting."
+msgstr ""
+"title (str): The title of the letting. address (Address): The address "
+"object related to the letting."
+
+#: ../../lettings.rst
+msgid "Raises"
+msgstr "Raises"
+
+#: lettings.views.letting:18 of
+msgid "If no letting exists with the given `letting_id`."
+msgstr "If no letting exists with the given `letting_id`."
+
