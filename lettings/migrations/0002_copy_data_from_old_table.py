@@ -7,8 +7,9 @@ def copy_data(apps, schema_editor):
     NewAddress = apps.get_model('lettings', 'Address')
     NewLetting = apps.get_model('lettings', 'Letting')
 
-    for old_addr in OldAddress.objects.all():
-        NewAddress.objects.create(
+    old_addresses = OldAddress.objects.all()
+    new_addresses = [
+        NewAddress(
             id=old_addr.id,
             number=old_addr.number,
             street=old_addr.street,
@@ -17,13 +18,20 @@ def copy_data(apps, schema_editor):
             zip_code=old_addr.zip_code,
             country_iso_code=old_addr.country_iso_code,
         )
+        for old_addr in old_addresses
+    ]
+    NewAddress.objects.bulk_create(new_addresses)
 
-    for old_let in OldLetting.objects.all():
-        NewLetting.objects.create(
+    old_lettings = OldLetting.objects.all()
+    new_lettings = [
+        NewLetting(
             id=old_let.id,
             title=old_let.title,
             address_id=old_let.address_id,
         )
+        for old_let in old_lettings
+    ]
+    NewLetting.objects.bulk_create(new_lettings)
 
 
 class Migration(migrations.Migration):
