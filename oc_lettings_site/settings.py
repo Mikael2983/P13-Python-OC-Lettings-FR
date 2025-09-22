@@ -206,7 +206,7 @@ LOGGING = {
     },
     "handlers": {
         "sentry": {
-            "level": "INFO",
+            "level": "WARNING",
             "class": "sentry_sdk.integrations.logging.EventHandler",
             "formatter": "verbose",
         },
@@ -217,7 +217,7 @@ LOGGING = {
         },
     },
     "root": {
-        "level": "INFO",
+        "level": "WARNING",
         "handlers": ["sentry", "console"],
     },
     "loggers": {
