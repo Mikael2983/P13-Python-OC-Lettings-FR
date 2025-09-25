@@ -38,7 +38,7 @@ def custom_error_404(request: HttpRequest, exception: Exception) -> HttpResponse
 
     Returns:
         HttpResponse: The rendered 'errors/404.html' template with HTTP status code 404.
-"""
+    """
     logger.error(f"404 Not Found: {request.path}")
     return render(request, "errors/404.html", status=404)
 
