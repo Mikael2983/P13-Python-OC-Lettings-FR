@@ -8,7 +8,10 @@ and the project adheres to `Semantic Versioning <https://semver.org/>`_.
 
 [Unreleased]
 ------------
+- user registration form
 
+[1.0.1] - 2025-09-26
+--------------------
 - Initial Sphinx documentation setup
 - Base project structure created
 
